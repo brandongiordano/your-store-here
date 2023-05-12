@@ -35,15 +35,30 @@ function CategoryMenu() {
   }, [categoryData, loading, dispatch]);
 
   const handleClick = (id) => {
-    dispatch({
-      type: UPDATE_CURRENT_CATEGORY,
-      currentCategory: id,
-    });
+    if (id === "all") {  // handle click for "All Products" button
+      dispatch({
+        type: UPDATE_CURRENT_CATEGORY,
+        currentCategory: "",
+      });
+    } else {
+      dispatch({
+        type: UPDATE_CURRENT_CATEGORY,
+        currentCategory: id,
+      });
+    }
   };
 
   return (
     <div>
       <h2>Choose a Category:</h2>
+      <button
+        key="all"
+        onClick={() => {
+          handleClick("all");
+        }}
+      >
+        All Products
+      </button>
       {categories.map((item) => (
         <button
           key={item._id}
