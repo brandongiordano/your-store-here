@@ -1,7 +1,8 @@
 {
   "name": "your-store-here",
   "version": "1.0.0",
-  "description": "",
+  "homepage": "https://brandongiordano.github.io/your-store-here",
+  "description": "A template for a simple eccomerce site",
   "main": "server/server.js",
   "scripts": {
     "start": "node server/server.js",
