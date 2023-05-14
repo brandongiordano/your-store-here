@@ -1,5 +1,5 @@
 :root {
-  --primary: #232F3E;
+  --primary: #000000;
   --secondary: #F3A847;
   --tertiary: #B12704;
   --light: #fafafa;
@@ -201,6 +201,19 @@ input:focus {
 
 .error-text {
   color: var(--error);
+}
+
+ul {
+  list-style: none;
+}
+
+li a:hover {
+  color: #B12704;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
 }
 
 @media screen and (max-width: 768px) {
